@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desert Safari Adventures - Experience the Magic of the Desert</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-sun me-2"></i>Desert Safari
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tours">Tours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <!-- Background Video -->
+        <div class="hero-video-container">
+            <!-- Loading Image (shown until video loads) -->
+            <div class="hero-loading-bg" id="heroLoadingBg"></div>
+            
+            <iframe 
+                class="hero-video"
+                id="heroVideo"
+                src="https://www.youtube.com/embed/Qli6rOByu8Q?autoplay=1&mute=1&loop=1&playlist=Qli6rOByu8Q&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                onload="hideLoadingImage()">
+            </iframe>
+            
+            <!-- Fallback background for mobile devices -->
+            <div class="hero-fallback-bg"></div>
+        </div>
+        
+        <div class="hero-overlay">
+            <div class="container">
+                <div class="row min-vh-100 align-items-center">
+                    <div class="col-lg-8">
+                        <div class="offer-badge mb-3">
+                            <span class="badge bg-danger fs-5 px-4 py-2">
+                                <i class="fas fa-fire me-2"></i>50% Off - Exclusive Summer Offer
+                            </span>
+                        </div>
+                        
+                        <h1 class="hero-title display-3 fw-bold text-white mb-4">
+                            Book Desert Safari Dubai Now!
+                        </h1>
+                        
+                        <div class="hero-features mb-4">
+                            <div class="feature-item d-flex align-items-center mb-3">
+                                <i class="fas fa-check-circle text-success me-3 fs-4"></i>
+                                <span class="text-white fs-5">Hotel pick-up and drop-off anywhere in Dubai</span>
+                            </div>
+                            <div class="feature-item d-flex align-items-center mb-3">
+                                <i class="fas fa-check-circle text-success me-3 fs-4"></i>
+                                <span class="text-white fs-5">Four live shows plus henna and shisha corners</span>
+                            </div>
+                            <div class="feature-item d-flex align-items-center mb-3">
+                                <i class="fas fa-check-circle text-success me-3 fs-4"></i>
+                                <span class="text-white fs-5">Unlimited BBQ buffet with veg & non-veg options</span>
+                            </div>
+                            <div class="feature-item d-flex align-items-center mb-3">
+                                <i class="fas fa-check-circle text-success me-3 fs-4"></i>
+                                <span class="text-white fs-5">Clear desert safari Dubai price, no hidden fees</span>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-buttons">
+                            <a href="https://wa.me/971569420950?text=Hi! I'm interested in the 50%%20Off Summer Desert Safari offer. Can you provide more details?" target="_blank" class="btn btn-primary btn-lg me-3">
+                                <i class="fab fa-whatsapp me-2"></i>Book 50% Off Safari
+                            </a>
+                            <a href="#tours" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-info-circle me-2"></i>View Packages
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                                <div class="col-lg-6 mb-4">
+                    <img src="https://deserteveningsafari.com/wp-content/uploads/2018/04/Dune-Bashing.jpg" 
+                         alt="Dune Bashing Desert Safari Adventure" class="img-fluid rounded-3 shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title mb-4">About Royal Planet Tourism</h2>
+                    <p class="lead mb-4">
+                        For over 5 years, we've been helping travellers and Dubai residents enjoy the desert the safe and exciting way. 
+                        Our local team knows every dune and every sunset spot, so you get the real Dubai desert safari you came for—without the guesswork.
+                    </p>
+                    <div class="features">
+                        <div class="feature-item d-flex align-items-center mb-3">
+                            <div class="feature-icon me-3">
+                                <i class="fas fa-user-tie text-primary"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Expert Guides</h5>
+                                <p class="mb-0 text-muted">Explore Dubai with expert and friendly guides</p>
+                            </div>
+                        </div>
+                        <div class="feature-item d-flex align-items-center mb-3">
+                            <div class="feature-icon me-3">
+                                <i class="fas fa-shield-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Safety Travel</h5>
+                                <p class="mb-0 text-muted">Your comfort and safety are our top priority every time</p>
+                            </div>
+                        </div>
+                        <div class="feature-item d-flex align-items-center mb-3">
+                            <div class="feature-icon me-3">
+                                <i class="fas fa-trophy text-primary"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Award Winning Company</h5>
+                                <p class="mb-0 text-muted">Local team with deep Dubai knowledge</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tours Section -->
+    <section id="tours" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Choose Your Adventure</h2>
+                <p class="lead text-muted">Select the perfect desert safari package for your experience</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="card tour-card h-100 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="tour-icon mb-3">
+                                <i class="fas fa-camel text-primary"></i>
+                            </div>
+                            <h3 class="card-title mb-3">Standard Desert Safari</h3>
+                            <div class="price mb-3">
+                                <span class="currency">AED</span>
+                                <span class="amount">79</span>
+                                <span class="period">/person</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Pickup & Drop by 4×4 Vehicle (2:00-3:00 PM)</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Adventurous Dunes Bashing</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Sand Boarding</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Sunset Picture Point</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Camel Ride</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Arabic Coffee & Fresh Dates</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Hubbly Bubbly (Sheesha Area)</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Traditional Costumes</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Unlimited Softdrinks, Tea, Coffee, Water</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Henna Painting</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>2 Belly Dance Shows</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>2 Fire Shows</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Tanura Show</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Purtggol Show</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>BBQ & Buffet Dinner (Veg & Non-veg)</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Hotel Drop-off (9:30-9:45 PM)</li>
+                            </ul>
+                            <a href="https://wa.me/971569420950?text=Hi! I'm interested in the Evening Desert Safari tour (AED 79). Can you provide more details?" target="_blank" class="btn btn-primary btn-lg w-100">
+                                <i class="fab fa-whatsapp me-2"></i>Book via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card tour-card h-100 shadow-sm border-primary">
+                        <div class="card-body text-center p-4">
+                            <div class="tour-icon mb-3">
+                                <i class="fas fa-crown text-warning"></i>
+                            </div>
+                            <h3 class="card-title mb-3">VIP Red Dune Safari</h3>
+                            <div class="price mb-3">
+                                <span class="currency">AED</span>
+                                <span class="amount">150</span>
+                                <span class="period">/person</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Pickup & Drop by 4×4 Vehicle (2:00-3:00 PM)</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Adventurous Dunes Bashing</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Land Cruiser Pick up & Drop from Hotel</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Adventurous Desert Driving Experience</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Sunset Picture Point</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Sand Boarding</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Camel Ride</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Welcome Arabic Tea or Coffee with Dates</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Unlimited Softdrinks, Tea, Coffee, Water</li>
+                                <li class="mb-2"><i class="mb-2"><i class="fas fa-check text-success me-2"></i>VIP Seating Area at the Camp</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Arabic Costumes for Photographs</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Henna Painting</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Hubbly Bubbly / Water Pipe</li>
+                                <li class="mb-2"><i class="mb-2"><i class="fas fa-check text-success me-2"></i>Quad Bikes & Buggy Ride (Additional Cost)</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>2 Belly Dance Live Performance</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>2 Fire Show Live Performance</li>
+                                <li class="mb-2"><i class="mb-2"><i class="fas fa-check text-success me-2"></i>Tanura Show (Traditional Folk Dance)</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Live BBQ Dinner Made at Camp Site</li>
+                                <li class="mb-2"><i class="mb-2"><i class="fas fa-check text-success me-2"></i>Continental Buffet (Veg & Non-veg)</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Arabic Sweets and Fresh Fruits</li>
+                                <li class="mb-2"><i class="mb-2"><i class="fas fa-check text-success me-2"></i>Hotel Drop-off (9:30-9:45 PM)</li>
+                            </ul>
+                            <a href="https://wa.me/971569420950?text=Hi! I'm interested in the VIP Red Dune Safari tour (AED 150). Can you provide more details?" target="_blank" class="btn btn-warning btn-lg w-100">
+                                <i class="fab fa-whatsapp me-2"></i>Book via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card tour-card h-100 shadow-sm border-success">
+                        <div class="card-body text-center p-4">
+                            <div class="tour-icon mb-3">
+                                <i class="fas fa-motorcycle text-success"></i>
+                            </div>
+                            <h3 class="card-title mb-3">VIP Safari + Quad Bike</h3>
+                            <div class="price mb-3">
+                                <span class="currency">AED</span>
+                                <span class="amount">180</span>
+                                <span class="period">/person</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Pick & Drop From Your Location (Shared)</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Dune Bashing in 4×4</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Quad Biking (30 to 35 minutes)</li>
+                                <li class="mb-2"><i class="mb-2"><i class="fas fa-check text-success me-2"></i>Sunset Point</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Short Camel Ride</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Sand Boarding</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>B.B.Q Dinner (With Veg & Non-Veg Options)</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Photos in Traditional Costumes</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Hubbly Bubbly (Designated area/shared)</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Small Henna Painting (For Ladies and Kids)</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Unlimited Soft Drinks, Mineral Water</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Tea and Coffee</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Tanoura Dance (Traditional Arabic Dance)</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Fire Show</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Belly Dance Show</li>
+                            </ul>
+                            <a href="https://wa.me/971569420950?text=Hi! I'm interested in the Safari + Quad Bike tour (AED 180). Can you provide more details?" target="_blank" class="btn btn-success btn-lg w-100">
+                                <i class="fab fa-whatsapp me-2"></i>Book via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Gallery</h2>
+                <p class="lead text-muted">Take a glimpse of the amazing experiences that await you</p>
+            </div>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="https://deserteveningsafari.com/wp-content/uploads/2022/10/ATV-Bike-Ride-Desert-Safari-768x512.jpg" 
+                             alt="ATV Bike Ride Desert Safari" class="img-fluid rounded-3">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="https://deserteveningsafari.com/wp-content/uploads/2022/10/desert-sandboarding-768x512.jpg" 
+                             alt="Desert Sandboarding Adventure" class="img-fluid rounded-3">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="https://deserteveningsafari.com/wp-content/uploads/2022/10/falcon-desert-safari-768x512.jpg" 
+                             alt="Falcon Desert Safari Experience" class="img-fluid rounded-3">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="https://deserteveningsafari.com/wp-content/uploads/2022/10/Live-Tanoura-Show-768x512.jpg" 
+                             alt="Live Tanoura Show Performance" class="img-fluid rounded-3">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="https://deserteveningsafari.com/wp-content/uploads/2022/10/Live-Belly-Dance-768x512.jpg" 
+                             alt="Live Belly Dance Show" class="img-fluid rounded-3">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="https://deserteveningsafari.com/wp-content/uploads/2022/10/ATV-Bike-Ride-Desert-Safari-768x512.jpg" 
+                             alt="Desert Safari Adventure" class="img-fluid rounded-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h2 class="section-title text-white mb-4">Get In Touch</h2>
+                    <p class="lead mb-4">
+                        Ready to experience the adventure of a lifetime? Contact us to book your desert safari tour!
+                    </p>
+                    <div class="contact-info">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-phone me-3 text-primary"></i>
+                            <span>+971 56 942 0950</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fab fa-whatsapp me-3 text-success"></i>
+                            <a href="https://wa.me/971569420950" target="_blank" class="text-white text-decoration-none">WhatsApp: +971 56 942 0950</a>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-envelope me-3 text-primary"></i>
+                            <span>info@desertsafari.ae</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-map-marker-alt me-3 text-primary"></i>
+                            <span>Dubai, United Arab Emirates</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <form class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" placeholder="First Name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" placeholder="Last Name" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email Address" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control" placeholder="Phone Number" required>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select" required>
+                                <option value="">Select Tour Package</option>
+                                <option value="standard">Standard Safari - AED 79</option>
+                                <option value="vip">VIP Safari - AED 150</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="4" placeholder="Special Requirements"></textarea>
+                        </div>
+                        <a href="https://wa.me/971569420950?text=Hi! I'd like to book a desert safari tour. Please provide more information." target="_blank" class="btn btn-primary btn-lg w-100">
+                            <i class="fab fa-whatsapp me-2"></i>Book via WhatsApp
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 Desert Safari Adventures. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/971569420950" target="_blank" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Function to hide loading image when video loads
+        function hideLoadingImage() {
+            const loadingBg = document.getElementById('heroLoadingBg');
+            if (loadingBg) {
+                // Add fade-out class for smooth transition
+                loadingBg.classList.add('fade-out');
+                
+                // Remove the element after transition completes
+                setTimeout(() => {
+                    if (loadingBg.parentNode) {
+                        loadingBg.parentNode.removeChild(loadingBg);
+                    }
+                }, 500);
+            }
+        }
+        
+        // Fallback: Hide loading image after 5 seconds if video doesn't load
+        setTimeout(() => {
+            hideLoadingImage();
+        }, 5000);
+        
+        // Check if video is loaded and hide loading image
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('heroVideo');
+            if (video) {
+                // If video is already loaded, hide loading image
+                if (video.contentWindow && video.contentWindow.document.readyState === 'complete') {
+                    hideLoadingImage();
+                }
+            }
+        });
+    </script>
+</body>
+</html> 
