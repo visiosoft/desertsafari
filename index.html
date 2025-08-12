@@ -28,12 +28,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#virtual-tour">Virtual Tour</a>
-                    </li>
+                                            <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#booking">Book Now</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#virtual-tour">Virtual Tour</a>
+                        </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#tours">Tours</a>
                     </li>
@@ -126,67 +129,98 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-5">
+    <!-- Interactive Booking Section -->
+    <section id="booking" class="py-4 bg-white">
         <div class="container">
-            <div class="row align-items-center">
-                                <div class="col-lg-6 mb-4">
-                    <div class="about-gallery">
-                        <div class="row g-3">
-                            <div class="col-6">
-                                <div class="gallery-item-small">
-                                    <img src="https://deserteveningsafari.com/wp-content/uploads/2018/04/Dune-Bashing.jpg" 
-                                         alt="Dune Bashing Adventure" class="img-fluid rounded-3">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="gallery-item-small">
-                                    <img src="https://deserteveningsafari.com/wp-content/uploads/2022/10/ATV-Bike-Ride-Desert-Safari-768x512.jpg" 
-                                         alt="ATV Bike Experience" class="img-fluid rounded-3">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="gallery-item-small">
-                                    <img src="https://deserteveningsafari.com/wp-content/uploads/2022/10/desert-sandboarding-768x512.jpg" 
-                                         alt="Sand Boarding Fun" class="img-fluid rounded-3">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="gallery-item-small">
-                                    <img src="https://deserteveningsafari.com/wp-content/uploads/2022/10/Live-Belly-Dance-768x512.jpg" 
-                                         alt="Live Entertainment" class="img-fluid rounded-3">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                                            <h2 class="section-title mb-4 text-white">
+                            <i class="fas fa-calendar-check me-3 text-primary"></i>
+                            Book Your Desert Safari Adventure
+                        </h2>
+                        <p class="lead text-white mb-4">Choose your package, select your date, and secure your spot in the desert</p>
                 </div>
-                <div class="col-lg-6">
-                    <h2 class="section-title mb-4">About Royal Planet Tourism</h2>
-                    <p class="lead mb-4">
-                        For over 5 years, we've been helping travellers and Dubai residents enjoy the desert the safe and exciting way. 
-                        Our local team knows every dune and every sunset spot, so you get the real Dubai desert safari you came for—without the guesswork.
-                    </p>
-                    <div class="features">
-                        <div class="feature-item d-flex align-items-center mb-3">
-                            <div class="feature-icon me-3">
-                                <i class="fas fa-user-tie text-primary"></i>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="booking-card bg-light p-3 rounded-3 shadow-sm">
+                        <form id="bookingForm" class="row g-3">
+                            <!-- Package Selection -->
+                            <div class="col-lg-6">
+                                <label for="packageSelect" class="form-label fw-bold">
+                                    <i class="fas fa-map-marked-alt me-2 text-primary"></i>
+                                    Select Package
+                                </label>
+                                <select class="form-select form-select-lg" id="packageSelect" required>
+                                    <option value="">Choose your adventure...</option>
+                                    <option value="evening-safari" data-price="79">Evening Desert Safari - AED 79</option>
+                                    <option value="vip-safari" data-price="150">VIP Red Dune Safari - AED 150</option>
+                                    <option value="quad-bike" data-price="180">Safari + Quad Bike - AED 180</option>
+                                </select>
                             </div>
-                            <div>
-                                <h5 class="mb-1">Expert Guides</h5>
-                                <p class="mb-0 text-muted">Explore Dubai with expert and friendly guides</p>
+                            
+                            <!-- Number of People -->
+                            <div class="col-lg-6">
+                                <label for="peopleCount" class="form-label fw-bold">
+                                    <i class="fas fa-users me-2 text-primary"></i>
+                                    Number of People
+                                </label>
+                                <select class="form-select form-select-lg" id="peopleCount" required>
+                                    <option value="">Select count...</option>
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 People</option>
+                                    <option value="3">3 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="5">5 People</option>
+                                    <option value="6">6 People</option>
+                                    <option value="7">7 People</option>
+                                    <option value="8">8 People</option>
+                                    <option value="9">9 People</option>
+                                    <option value="10">10+ People</option>
+                                </select>
                             </div>
-                        </div>
-                        <div class="feature-item d-flex align-items-center mb-3">
-                            <div class="feature-icon me-3">
-                                <i class="fas fa-shield-alt text-primary"></i>
+                            
+                            <!-- Date Selection -->
+                            <div class="col-12">
+                                <label for="tourDate" class="form-label fw-bold">
+                                    <i class="fas fa-calendar me-2 text-primary"></i>
+                                    Preferred Date
+                                </label>
+                                <input type="date" class="form-control form-control-lg" id="tourDate" required min="">
                             </div>
-                            <div>
-                                <h5 class="mb-1">Safety Travel</h5>
-                                <p class="mb-0 text-muted">Your comfort and safety are our top priority every time</p>
-                            </div>
-                        </div>
+                            
 
-
+                            
+                            <!-- Price Display -->
+                            <div class="col-12">
+                                <div class="price-summary bg-white p-3 rounded-3 border">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-6">
+                                            <h5 class="mb-0 text-primary">
+                                                <i class="fas fa-calculator me-2"></i>
+                                                Total Price
+                                            </h5>
+                                        </div>
+                                        <div class="col-md-6 text-end">
+                                            <div class="total-price">
+                                                <span class="currency">AED</span>
+                                                <span class="amount" id="totalAmount">0</span>
+                                                <span class="period">/total</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Booking Button -->
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-primary btn-lg px-5 py-3" id="bookNowBtn">
+                                    <i class="fab fa-whatsapp me-3"></i>
+                                    Book Now via WhatsApp
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -252,6 +286,71 @@
                         <button class="btn btn-primary btn-sm" onclick="openVirtualTour('desert-camp')">
                             <i class="fas fa-vr-cardboard me-2"></i>Start Virtual Tour
                         </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4">
+                    <div class="about-gallery">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="gallery-item-small">
+                                    <img src="https://deserteveningsafari.com/wp-content/uploads/2018/04/Dune-Bashing.jpg" 
+                                         alt="Dune Bashing Adventure" class="img-fluid rounded-3">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="gallery-item-small">
+                                    <img src="https://deserteveningsafari.com/wp-content/uploads/2022/10/ATV-Bike-Ride-Desert-Safari-768x512.jpg" 
+                                         alt="ATV Bike Experience" class="img-fluid rounded-3">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="gallery-item-small">
+                                    <img src="https://deserteveningsafari.com/wp-content/uploads/2022/10/desert-sandboarding-768x512.jpg" 
+                                         alt="Sand Boarding Fun" class="img-fluid rounded-3">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="gallery-item-small">
+                                    <img src="https://deserteveningsafari.com/wp-content/uploads/2022/10/Live-Belly-Dance-768x512.jpg" 
+                                         alt="Live Entertainment" class="img-fluid rounded-3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title mb-4">About Royal Planet Tourism</h2>
+                    <p class="lead mb-4">
+                        For over 5 years, we've been helping travellers and Dubai residents enjoy the desert the safe and exciting way. 
+                        Our local team knows every dune and every sunset spot, so you get the real Dubai desert safari you came for—without the guesswork.
+                    </p>
+                    <div class="features">
+                        <div class="feature-item d-flex align-items-center mb-3">
+                            <div class="feature-icon me-3">
+                                <i class="fas fa-user-tie text-primary"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Expert Guides</h5>
+                                <p class="mb-0 text-muted">Explore Dubai with expert and friendly guides</p>
+                            </div>
+                        </div>
+                        <div class="feature-item d-flex align-items-center mb-3">
+                            <div class="feature-icon me-3">
+                                <i class="fas fa-shield-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Safety Travel</h5>
+                                <p class="mb-0 text-muted">Your comfort and safety are our top priority every time</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1174,7 +1273,137 @@
                     sendMessage();
                 }
             });
+
+            // Initialize booking form functionality
+            initializeBookingForm();
         });
+
+        // Booking Form Functionality
+        function initializeBookingForm() {
+            const packageSelect = document.getElementById('packageSelect');
+            const peopleCount = document.getElementById('peopleCount');
+            const tourDate = document.getElementById('tourDate');
+            const bookingForm = document.getElementById('bookingForm');
+            
+            // Set minimum date to today
+            const today = new Date();
+            const tomorrow = new Date(today);
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            tourDate.min = tomorrow.toISOString().split('T')[0];
+            
+            // Price calculation
+            function calculatePrice() {
+                const selectedPackage = packageSelect.value;
+                const people = parseInt(peopleCount.value) || 0;
+                
+                if (selectedPackage && people > 0) {
+                    const basePrice = parseInt(packageSelect.options[packageSelect.selectedIndex].dataset.price);
+                    const total = basePrice * people;
+                    document.getElementById('totalAmount').textContent = total;
+                    
+                    // Show price summary
+                    document.querySelector('.price-summary').style.display = 'block';
+                } else {
+                    document.getElementById('totalAmount').textContent = '0';
+                    document.querySelector('.price-summary').style.display = 'none';
+                }
+            }
+            
+            // Event listeners for price calculation
+            packageSelect.addEventListener('change', calculatePrice);
+            peopleCount.addEventListener('change', calculatePrice);
+            
+            // Form submission
+            bookingForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Validate form
+                if (!packageSelect.value || !peopleCount.value || !tourDate.value) {
+                    showValidationMessage('Please fill in all required fields.', 'error');
+                    return;
+                }
+                
+                // Show loading state
+                const bookBtn = document.getElementById('bookNowBtn');
+                bookBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-3"></i>Processing...';
+                bookBtn.disabled = true;
+                bookingForm.classList.add('booking-loading');
+                
+                // Prepare WhatsApp message
+                const packageName = packageSelect.options[packageSelect.selectedIndex].text;
+                const people = peopleCount.value;
+                const date = tourDate.value;
+                const totalPrice = document.getElementById('totalAmount').textContent;
+                
+                const message = `🏜️ *Desert Safari Booking Request* 🏜️
+
+*Package:* ${packageName}
+*Number of People:* ${people}
+*Preferred Date:* ${date}
+*Total Price:* AED ${totalPrice}
+
+I would like to book this desert safari adventure. Please confirm availability and provide booking details.`;
+
+                // Encode message for WhatsApp
+                const encodedMessage = encodeURIComponent(message);
+                const whatsappUrl = `https://wa.me/971569420950?text=${encodedMessage}`;
+                
+                // Simulate processing delay
+                setTimeout(() => {
+                    // Remove loading state
+                    bookBtn.innerHTML = '<i class="fab fa-whatsapp me-3"></i>Book Now via WhatsApp';
+                    bookBtn.disabled = false;
+                    bookingForm.classList.remove('booking-loading');
+                    
+                    // Show success message
+                    showValidationMessage('Booking request prepared! Redirecting to WhatsApp...', 'success');
+                    
+                    // Redirect to WhatsApp after a short delay
+                    setTimeout(() => {
+                        window.open(whatsappUrl, '_blank');
+                        
+                        // Reset form
+                        bookingForm.reset();
+                        document.getElementById('totalAmount').textContent = '0';
+                        document.querySelector('.price-summary').style.display = 'none';
+                        
+                        // Remove success message
+                        const successMsg = document.querySelector('.booking-success');
+                        if (successMsg) {
+                            successMsg.remove();
+                        }
+                    }, 2000);
+                }, 1500);
+            });
+        }
+        
+        // Show validation/success messages
+        function showValidationMessage(message, type) {
+            // Remove existing messages
+            const existingMsg = document.querySelector('.booking-success, .booking-error');
+            if (existingMsg) {
+                existingMsg.remove();
+            }
+            
+            // Create new message
+            const messageDiv = document.createElement('div');
+            messageDiv.className = type === 'success' ? 'booking-success' : 'booking-error';
+            messageDiv.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
+                <p class="mb-0">${message}</p>
+            `;
+            
+            // Insert after the form
+            const bookingForm = document.getElementById('bookingForm');
+            bookingForm.parentNode.insertBefore(messageDiv, bookingForm.nextSibling);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                if (messageDiv.parentNode) {
+                    messageDiv.remove();
+                }
+            }, 5000);
+        }
     </script>
 </body>
 </html> 
